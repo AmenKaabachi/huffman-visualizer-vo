@@ -62,7 +62,7 @@ export function Advantages() {
         {/* Footer */}
         <div className="mt-16 text-center">
           <p className="text-slate-400 text-sm">
-            Built with React, TypeScript, and Tailwind CSS • Bilingual Support (EN/FR)
+            {t.footer.credit}
           </p>
         </div>
       </div>

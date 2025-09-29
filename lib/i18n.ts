@@ -9,6 +9,9 @@ export interface Translations {
     huffmanCoding: string
     bits: string
   }
+  footer: {
+    credit: string
+  }
   nav: {
     principles: string
     algorithm: string
@@ -228,6 +231,9 @@ export const translations: Record<Language, Translations> = {
         ],
       },
     },
+    footer: {
+      credit: "Developed by ISAMM Engineering Students • Computer Networks Course Project",
+    },
   },
   fr: {
     hero: {
@@ -346,6 +352,9 @@ export const translations: Record<Language, Translations> = {
           "Compression de bases de données",
         ],
       },
+    },
+    footer: {
+      credit: "Développé par les étudiants ingénieurs ISAMM • Projet du cours Réseaux Informatiques",
     },
   },
 }
