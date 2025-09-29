@@ -5,6 +5,9 @@ export interface Translations {
     title: string
     subtitle: string
     description: string
+    fixedLength: string
+    huffmanCoding: string
+    bits: string
   }
   nav: {
     principles: string
@@ -28,11 +31,25 @@ export interface Translations {
       title: string
       description: string
     }
+    example: {
+      title: string
+      fixedLength: string
+      huffmanCoding: string
+      compression: string
+      characters: string
+      bits: string
+    }
   }
   algorithm: {
     title: string
     subtitle: string
     steps: {
+      frequency: string
+      queue: string
+      tree: string
+      codes: string
+    }
+    stepDescriptions: {
       frequency: string
       queue: string
       tree: string
@@ -64,6 +81,10 @@ export interface Translations {
     encoded: string
     compression: string
     bits: string
+    characters: string
+    ascii: string
+    huffman: string
+    saved: string
   }
   advantages: {
     title: string
@@ -96,6 +117,9 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Interactive Algorithm Visualizer",
       description:
         "Understand lossless data compression through interactive visualizations and step-by-step algorithm exploration.",
+      fixedLength: "Fixed-Length (ASCII)",
+      huffmanCoding: "Huffman Coding",
+      bits: "bits",
     },
     nav: {
       principles: "Principles",
@@ -121,6 +145,14 @@ export const translations: Record<Language, Translations> = {
         title: "Prefix-Free Property",
         description: "No code is a prefix of another, ensuring unambiguous decoding without delimiters.",
       },
+      example: {
+        title: "Example: \"HELLO\" Frequency Analysis",
+        fixedLength: "Fixed-Length (3 bits/char)",
+        huffmanCoding: "Huffman Coding",
+        compression: "26.7% compression",
+        characters: "5 characters × 3 bits",
+        bits: "bits",
+      },
     },
     algorithm: {
       title: "Algorithm Visualization",
@@ -130,6 +162,12 @@ export const translations: Record<Language, Translations> = {
         queue: "Build priority queue",
         tree: "Construct Huffman tree",
         codes: "Assign binary codes",
+      },
+      stepDescriptions: {
+        frequency: "Count character occurrences",
+        queue: "Sort by frequency", 
+        tree: "Merge lowest frequencies",
+        codes: "Traverse tree: left=0, right=1",
       },
       controls: {
         play: "Play",
@@ -157,6 +195,10 @@ export const translations: Record<Language, Translations> = {
       encoded: "Encoded Binary",
       compression: "Compression Ratio",
       bits: "bits",
+      characters: "characters",
+      ascii: "ASCII Encoding (8 bits/char)",
+      huffman: "Huffman",
+      saved: "bits",
     },
     advantages: {
       title: "Advantages & Applications",
@@ -192,7 +234,10 @@ export const translations: Record<Language, Translations> = {
       title: "Codage Huffman",
       subtitle: "Visualiseur d'Algorithme Interactif",
       description:
-        "Comprenez la compression de données sans perte grâce à des visualisations interactives et une exploration étape par étape de l'algorithme.",
+        "Le codage de Huffman est une méthode de compression sans perte, utilisée dans la couche application , qui permet de réduire la taille des données tout en conservant toutes les informations originales",
+      fixedLength: "Longueur fixe (ASCII)",
+      huffmanCoding: "Codage Huffman",
+      bits: "bits",
     },
     nav: {
       principles: "Principes",
@@ -219,15 +264,29 @@ export const translations: Record<Language, Translations> = {
         description:
           "Aucun code n'est le préfixe d'un autre, garantissant un décodage sans ambiguïté sans délimiteurs.",
       },
+      example: {
+        title: "Exemple : Analyse de fréquence \"HELLO\"",
+        fixedLength: "Longueur fixe (3 bits/char)",
+        huffmanCoding: "Codage Huffman",
+        compression: "26,7% de compression",
+        characters: "5 caractères × 3 bits",
+        bits: "bits",
+      },
     },
     algorithm: {
-      title: "Visualisation de l'Algorithme",
+      title: "Les étapes de construction de l'algorithme de Huffman",
       subtitle: "Observez l'algorithme Huffman construire l'arbre de codage étape par étape",
       steps: {
         frequency: "Calculer les fréquences des caractères",
         queue: "Construire la file de priorité",
         tree: "Construire l'arbre Huffman",
         codes: "Attribuer les codes binaires",
+      },
+      stepDescriptions: {
+        frequency: "compter les occurrences de chaque caractère dans le texte",
+        queue: "trier les symboles par fréquence croissante",
+        tree: "fusionner les deux nœuds de plus faible fréquence jusqu'à obtenir la racine",
+        codes: "parcourir l'arbre : gauche = 0, droite = 1 → obtenir les codes préfixes",
       },
       controls: {
         play: "Jouer",
@@ -255,6 +314,10 @@ export const translations: Record<Language, Translations> = {
       encoded: "Binaire Encodé",
       compression: "Taux de Compression",
       bits: "bits",
+      characters: "caractères",
+      ascii: "Encodage ASCII (8 bits/car)",
+      huffman: "Huffman",
+      saved: "bits",
     },
     advantages: {
       title: "Avantages & Applications",

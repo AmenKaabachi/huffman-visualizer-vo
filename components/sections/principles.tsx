@@ -59,7 +59,7 @@ export function Principles() {
 
         {/* Interactive frequency chart example */}
         <div className="glass-card p-8 rounded-2xl max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold mb-6 text-slate-100">Example: "HELLO" Frequency Analysis</h3>
+          <h3 className="text-2xl font-bold mb-6 text-slate-100">{t.principles.example.title}</h3>
 
           <div className="space-y-4 mb-8">
             {exampleData.map((item, index) => (
@@ -95,7 +95,7 @@ export function Principles() {
 
                 {/* Code length */}
                 <div className="w-24 text-slate-400 text-sm">
-                  {item.code.length} {item.code.length === 1 ? "bit" : "bits"}
+                  {item.code.length} {item.code.length === 1 ? t.principles.example.bits.slice(0, -1) : t.principles.example.bits}
                 </div>
               </div>
             ))}
@@ -104,15 +104,22 @@ export function Principles() {
           {/* Comparison */}
           <div className="grid md:grid-cols-2 gap-6 pt-6 border-t border-slate-700">
             <div>
-              <div className="text-sm text-slate-500 uppercase tracking-wider mb-2">Fixed-Length (3 bits/char)</div>
-              <div className="text-3xl font-bold text-slate-300">15 bits</div>
-              <div className="text-sm text-slate-500 mt-1">5 characters × 3 bits</div>
+              <div className="text-sm text-slate-500 uppercase tracking-wider mb-2">{t.principles.example.fixedLength}</div>
+              <div className="text-3xl font-bold text-slate-300">15 {t.principles.example.bits}</div>
+              <div className="text-sm text-slate-500 mt-1">{t.principles.example.characters}</div>
             </div>
             <div>
-              <div className="text-sm text-cyan-400 uppercase tracking-wider mb-2">Huffman Coding</div>
-              <div className="text-3xl font-bold text-cyan-400">11 bits</div>
-              <div className="text-sm text-cyan-400 mt-1">26.7% compression</div>
+              <div className="text-sm text-cyan-400 uppercase tracking-wider mb-2">{t.principles.example.huffmanCoding}</div>
+              <div className="text-3xl font-bold text-cyan-400">11 {t.principles.example.bits}</div>
+              <div className="text-sm text-cyan-400 mt-1">{t.principles.example.compression}</div>
             </div>
+          </div>
+          
+          {/* Explanation text */}
+          <div className="mt-6 p-4 bg-slate-800/50 rounded-lg">
+            <p className="text-slate-300 text-center leading-relaxed">
+              Ce graphique montre que Huffman donne des codes courts aux lettres fréquentes et des codes longs aux lettres rares, ce qui permet une compression efficace des données.
+            </p>
           </div>
         </div>
       </div>

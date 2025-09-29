@@ -181,7 +181,7 @@ export function Algorithm() {
                   <span className="text-blue-400 font-bold">1</span>
                 </div>
                 <h4 className="font-semibold text-slate-100 mb-2">{t.algorithm.steps.frequency}</h4>
-                <p className="text-sm text-slate-400">Count character occurrences</p>
+                <p className="text-sm text-slate-400">{t.algorithm.stepDescriptions.frequency}</p>
               </div>
 
               <div
@@ -193,7 +193,7 @@ export function Algorithm() {
                   <span className="text-green-400 font-bold">2</span>
                 </div>
                 <h4 className="font-semibold text-slate-100 mb-2">{t.algorithm.steps.queue}</h4>
-                <p className="text-sm text-slate-400">Sort by frequency</p>
+                <p className="text-sm text-slate-400">{t.algorithm.stepDescriptions.queue}</p>
               </div>
 
               <div
@@ -205,7 +205,7 @@ export function Algorithm() {
                   <span className="text-purple-400 font-bold">3</span>
                 </div>
                 <h4 className="font-semibold text-slate-100 mb-2">{t.algorithm.steps.tree}</h4>
-                <p className="text-sm text-slate-400">Merge lowest frequencies</p>
+                <p className="text-sm text-slate-400">{t.algorithm.stepDescriptions.tree}</p>
               </div>
 
               <div
@@ -219,7 +219,7 @@ export function Algorithm() {
                   <span className="text-orange-400 font-bold">4</span>
                 </div>
                 <h4 className="font-semibold text-slate-100 mb-2">{t.algorithm.steps.codes}</h4>
-                <p className="text-sm text-slate-400">Traverse tree: left=0, right=1</p>
+                <p className="text-sm text-slate-400">{t.algorithm.stepDescriptions.codes}</p>
               </div>
             </div>
           </div>

@@ -114,17 +114,17 @@ export function Hero() {
             <div className="grid md:grid-cols-2 gap-6 text-left">
               <div>
                 <div className="text-xs text-slate-500 uppercase tracking-wider mb-2 font-mono">
-                  Fixed-Length (ASCII)
+                  {t.hero.fixedLength}
                 </div>
                 <div className="font-mono text-sm text-slate-300 break-all">
                   01001000 01000101 01001100 01001100 01001111
                 </div>
-                <div className="text-xs text-slate-500 mt-2">40 bits</div>
+                <div className="text-xs text-slate-500 mt-2">40 {t.hero.bits}</div>
               </div>
               <div>
-                <div className="text-xs text-cyan-400 uppercase tracking-wider mb-2 font-mono">Huffman Coding</div>
+                <div className="text-xs text-cyan-400 uppercase tracking-wider mb-2 font-mono">{t.hero.huffmanCoding}</div>
                 <div className="font-mono text-sm text-cyan-400 break-all">110 10 0 0 111</div>
-                <div className="text-xs text-cyan-400 mt-2">11 bits (72.5% compression)</div>
+                <div className="text-xs text-cyan-400 mt-2">11 {t.hero.bits} (72.5% compression)</div>
               </div>
             </div>
           </div>

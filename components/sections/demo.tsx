@@ -65,7 +65,7 @@ export function Demo() {
             <div className="glass-card p-6 rounded-2xl">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-bold text-slate-100">{t.demo.original}</h3>
-                <div className="text-sm text-slate-400">{result.original.length} characters</div>
+                <div className="text-sm text-slate-400">{result.original.length} {t.demo.characters}</div>
               </div>
               <div className="bg-slate-800 p-4 rounded-lg">
                 <div className="text-lg font-mono text-slate-100 break-all">{result.original}</div>
@@ -75,7 +75,7 @@ export function Demo() {
             {/* ASCII encoding (for comparison) */}
             <div className="glass-card p-6 rounded-2xl">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-bold text-slate-100">ASCII Encoding (8 bits/char)</h3>
+                <h3 className="text-xl font-bold text-slate-100">{t.demo.ascii}</h3>
                 <div className="text-sm text-slate-400">
                   {result.originalBits} {t.demo.bits}
                 </div>
@@ -130,17 +130,17 @@ export function Demo() {
                       </div>
                       <div className="flex-1 grid md:grid-cols-2 gap-4">
                         <div>
-                          <div className="text-xs text-slate-500 mb-1">ASCII (8 bits)</div>
+                          <div className="text-xs text-slate-500 mb-1">ASCII (8 {t.demo.bits})</div>
                           <div className="font-mono text-sm text-slate-400">{asciiCode}</div>
                         </div>
                         <div>
-                          <div className="text-xs text-cyan-400 mb-1">Huffman ({code.length} bits)</div>
+                          <div className="text-xs text-cyan-400 mb-1">{t.demo.huffman} ({code.length} {t.demo.bits})</div>
                           <div className="font-mono text-sm text-cyan-400 font-bold">{code}</div>
                         </div>
                       </div>
                       <div className="text-right">
                         <div className="text-xs text-green-400">Saved</div>
-                        <div className="text-lg font-bold text-green-400">{8 - code.length} bits</div>
+                        <div className="text-lg font-bold text-green-400">{8 - code.length} {t.demo.saved}</div>
                       </div>
                     </div>
                   )
